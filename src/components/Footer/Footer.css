@@ -1,0 +1,66 @@
+
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-white);
+    padding: 2rem;
+    flex-wrap: wrap;
+    gap: 5%;
+}
+
+footer h6 {
+    padding: 1rem 0;
+}
+
+.social-links {
+    margin: 1rem 0;
+}
+
+.brand-info .links {
+    font-size: 1.7rem;
+}
+
+.sitemap .links {
+    font-size: 1.3rem;
+}
+
+.sitemap {
+    gap: 1rem
+}
+
+.sitemap li {
+    list-style: none;
+}
+
+footer input {
+    color: var(--color-white);
+}
+
+footer input::placeholder {
+    color: var(--color-faint-white);
+}
+
+.solid-secondary {
+    color: var(--color-white)
+}
+
+footer p {
+    font-size: 1.2rem;
+}
+
+footer svg {
+    margin: 8px;
+}
+
+@media (max-width: 680px) {
+
+    footer {
+        padding:2rem 1rem;
+    }
+
+}
+
+@media (max-width: 580px) {
+     .contact-you {
+        flex-grow: 1;
+    }
+}
