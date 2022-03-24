@@ -7,12 +7,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: var(--color-white); */
-  background-color: red;
 }
 
 body {
-  background-color: white;
+  /* to override the background-color inherited from component library */
+  background-color: var(--color-white);
 }
 
 code {
