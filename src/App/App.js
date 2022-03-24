@@ -8,11 +8,12 @@ import { Cart } from "../pages/Cart/Cart";
 import { Wishlist } from "../pages/Wishlist/Wishlist";
 import { Auth } from "../pages/Authentication/Auth";
 import { ErrorPage } from "../pages/Error/ErrorPage";
+import { Footer } from "../components/Footer/Footer";
 
 
 function App() {
   return (
-    <div className="App">
+    <div className="App ">
       <Nav/>
       <Routes>
         <Route path="/mockbee" element={<MockbeeHome/>}/>
@@ -23,6 +24,7 @@ function App() {
         <Route path="/auth" element={<Auth/>}/>
         <Route path="/404-page-not-found" element={<ErrorPage/>}/>
       </Routes>
+      <Footer/>
     </div>
   );
 }
