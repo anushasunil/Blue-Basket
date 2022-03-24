@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,600;1,700&display=swap');
+
+.icon {
+    color: var(--color-light-gray);
+    font-size: 2rem;
+}
+
+nav .input-box button {
+    padding: 1.2rem;
+    outline: none;
+}
+
+button {
+    border-radius: 0;
+    box-shadow: var(--shadow-mild);
+}
+
+.button-icons {
+    font-size: 1rem;
+}
+
+nav .actions {
+    gap: 2rem;
+    padding: 0 2%;
+}
+
+nav .input-box {
+    min-width:30%;
+}
+
+nav {
+    padding-bottom: 2%;
+}
+
+nav .input-box input {
+    padding: 1rem 0;
+}
+
+nav h3 {
+    padding: 2%;
+}
+
+.content li,
+.actions {
+    margin: 1rem 0;
+}
+
+.input-box input {
+    padding: 1rem;
+}
+
+.input-icon-container {
+    flex-wrap: nowrap;
+    border-radius: 0;
+}
+
+.content li,
+.actions {
+    margin: 1rem 0;
+}
+
+nav input::placeholder {
+    font-size: 1.4rem;
+}
+
+.brand-name,.brand-info h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.outline-secondary p {
+    font-size: 1rem
+}
+
+@media (max-width: 680px) {
+
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    nav {
+        padding: 2rem;
+    }
+
+    .input-box, .brand-name,.brand-info, .sitemap, .contact-you {
+        flex-grow: 1;
+    }
+}
+
+@media (max-width: 320px) {
+    html {
+        font-size: 10px;
+    }
+}
