@@ -7,6 +7,7 @@ import { Wishlist } from "../pages/Wishlist/Wishlist";
 import { Auth } from "../pages/Authentication/Auth";
 import { ErrorPage } from "../pages/Error/ErrorPage";
 import { Footer } from "../components/Footer/Footer";
+import { ProductListing } from "./ProductListing/ProductListing";
 
 
-export {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, Auth, ErrorPage, Footer}
+export {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, Auth, ErrorPage, Footer, ProductListing}
