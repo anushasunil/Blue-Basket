@@ -44,6 +44,8 @@ label {
 .card {
     justify-self: center;
     box-shadow: var(--shadow-mild);
+    text-align: center;
+    margin-bottom:1rem;
 }
 
 .content {
