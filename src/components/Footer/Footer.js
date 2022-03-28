@@ -19,13 +19,13 @@ export function Footer() {
         </div>
         <div className="sitemap display-flex-column">
             <li>
-               <Link to="/" className="links">Home</Link>
+               <Link to="/" className="links display-align-center">Home</Link>
             </li>
             <li>
-             <Link to="/404-page-not-found" className="links">About Us</Link>
+             <Link to="/404-page-not-found" className="links display-align-center">About Us</Link>
             </li>
             <li>
-            <Link to="/404-page-not-found" className="links">Products</Link>
+            <Link to="/404-page-not-found" className="links display-align-center">Products</Link>
             </li>
         </div>
         <div className="contact-you">
