@@ -45,3 +45,22 @@ button {
 .solid-secondary {
   color: var(--color-white)
 }
+
+@media (max-width: 680px) {
+  html {
+    font-size: 1px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  html {
+      font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  html {
+      font-size: 10px;
+  }
+}
