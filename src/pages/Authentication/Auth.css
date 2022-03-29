@@ -56,7 +56,6 @@ button {
 
 .action-btn button:active {
     top: 0;
-    border: 2px solid black;
 }
 
 .action-btn p {
