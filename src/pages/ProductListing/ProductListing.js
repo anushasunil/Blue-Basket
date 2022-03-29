@@ -47,6 +47,7 @@ export function ProductListing() {
                 }
                 {
                     filteredList.length === 0 && (
+                    
                         <div className="empty-message display-align-center display-justify-center">
                             No products to display
                         </div>

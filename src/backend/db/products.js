@@ -17,7 +17,7 @@ export const products = [
     oldPrice: 26.65,
     newPrice: 10.99,
     offerName: "Limited offer",
-    material: "cotton",
+    material: "COTTON",
     discountPercentage : 55
   },
   {
@@ -31,7 +31,7 @@ export const products = [
     oldPrice: 26.65,
     newPrice: 12.99,
     offerName: "Limited offer",
-    material: "rayon",
+    material: "RAYON",
     discountPercentage : 25
   },
   {
@@ -45,7 +45,7 @@ export const products = [
     oldPrice: 26.65,
     newPrice: 1.99,
     offerName: "Limited offer",
-    material: "wool",
+    material: "WOOL",
     discountPercentage : 30
   },
   {
@@ -59,7 +59,7 @@ export const products = [
     oldPrice: 26.65,
     newPrice: 9.99,
     offerName: "Limited offer",
-    material: "synthetic",
+    material: "SYNTHETIC",
     discountPercentage: 30
   },
   {
@@ -73,7 +73,7 @@ export const products = [
     oldPrice: 26.65,
     newPrice: 20.99,
     offerName: "Limited offer",
-    material: "cotton",
+    material: "COTTON",
     discountPercentage : 45
   },
   {
@@ -87,7 +87,7 @@ export const products = [
     oldPrice: 26.65,
     newPrice: 23.99,
     offerName: "Limited offer",
-    material: "cotton",
+    material: "COTTON",
     discountPercentage : 30
   },
   {
@@ -101,7 +101,7 @@ export const products = [
     oldPrice: 26.65,
     newPrice: 8.99,
     offerName: "Limited offer",
-    material: "rayon",
+    material: "RAYON",
     discountPercentage : 40
   },
   {
@@ -115,7 +115,7 @@ export const products = [
     oldPrice: 26.65,
     newPrice: 15.99,
     offerName: "Limited offer",
-    material: "synthetic",
+    material: "SYNTHETIC",
     discountPercentage : 10
   },
   {
@@ -129,7 +129,7 @@ export const products = [
     oldPrice: 26.65,
     newPrice: 15.99,
     offerName: "Limited offer",
-    matreial: "wool",
+    matreial: "WOOL",
     discountPercentage : 25
   }
 ];
