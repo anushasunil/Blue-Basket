@@ -17,7 +17,7 @@ export const SignUpPage = () => {
                     <h3>Sign Up</h3>
                     <ul>
                         <li>
-                            <label for="Email-Address" className="semi-bold">Email</label>
+                            <label forLabel="Email-Address" className="semi-bold">Email</label>
                             <div className="input-box display-flex-column">
                                 <div className="input-icon-container">
                                     <input type="email" placeholder="anusha@neog.camp" className="flex-grow"/>
@@ -25,7 +25,7 @@ export const SignUpPage = () => {
                             </div>
                         </li>
                         <li>
-                            <label for="Email-Address" className="semi-bold"> First Name</label>
+                            <label forLabel="Email-Address" className="semi-bold"> First Name</label>
                             <div className="input-box display-flex-column">
                                 <div className="input-icon-container">
                                     <input type="email" placeholder="first name" className="flex-grow"/>
@@ -33,7 +33,7 @@ export const SignUpPage = () => {
                             </div>
                         </li>
                         <li>
-                            <label for="Email-Address" className="semi-bold"> Last Name</label>
+                            <label forLabel="Email-Address" className="semi-bold"> Last Name</label>
                             <div className="input-box display-flex-column">
                                 <div className="input-icon-container">
                                     <input type="email" placeholder="last name" className="flex-grow"/>
@@ -41,7 +41,7 @@ export const SignUpPage = () => {
                             </div>
                         </li>
                         <li>
-                            <label for="Password" className="semi-bold">Password</label>
+                            <label forLabel="Password" className="semi-bold">Password</label>
                             <div className="input-box display-flex-column">
                                 <div className="input-icon-container display-align-center">
                                     <input type="password" placeholder="password" className="flex-grow"/>
@@ -50,7 +50,7 @@ export const SignUpPage = () => {
                             </div>
                         </li>
                         <li>
-                            <label for="Password" className="semi-bold">Confirm Password</label>
+                            <label forLabel="Password" className="semi-bold">Confirm Password</label>
                             <div className="input-box display-flex-column">
                                 <div className="input-icon-container">
                                     <input type="password" placeholder="re-enter password" className="flex-grow"/>
