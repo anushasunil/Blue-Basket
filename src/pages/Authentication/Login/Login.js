@@ -1,10 +1,10 @@
 import { useEffect } from "react";
-import "./Auth.css";
+import "../Auth.css";
 
 
-export function Auth() {
+export function LoginPage() {
     useEffect(()=>{
-        document.title = "Authentication | BlueBasket"
+        document.title = "Login | BlueBasket"
     })
 
     return (
