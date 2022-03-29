@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "../Auth.css";
+import { Link } from "react-router-dom";
 
 
 export function LoginPage() {
@@ -56,7 +57,7 @@ export function LoginPage() {
                             </button>
                             <button className="icon-with-text transparent display-align-center display-justify-center">
                                 <p>
-                                   <a href="/Authentication/SignUp/signup.html">Create New Account</a>
+                                   <Link to="/sign-up">Create a New Account</Link>
                                 </p>
                                 <i className="fa-solid fa-angle-right"></i>
                             </button>
