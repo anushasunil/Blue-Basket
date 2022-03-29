@@ -1,0 +1,148 @@
+.image-container {
+    width: fit-content;
+}
+
+.product-page {
+    flex-wrap: nowrap;
+    padding: 0 1rem;
+    position: relative;
+}
+
+.outline-secondary {
+    padding: 12px 20px;
+}
+
+section {
+    padding: 1rem 0;
+}
+
+input[type="range"] {
+    accent-color: var(--color-tertiary-light);
+     background: transparent;
+     cursor: pointer;
+     width: 100%;
+}
+
+input[type="range"]:focus {
+    outline: none;
+}
+
+section h6 {
+    padding: 8px 0;
+}
+
+label {
+    font-weight: 500;
+    color: var(--color-secondary-light)
+}
+
+.product-display {
+    gap: 1rem;
+    border-left: 1px solid; 
+}
+
+.card {
+    justify-self: center;
+    box-shadow: var(--shadow-mild);
+    text-align: center;
+    margin-bottom:1rem;
+}
+
+.content {
+    font-size:13px;
+}
+
+.content h3, .content h4 {
+    font-size: 170%;
+}
+
+
+.card img {
+    width: 60%;
+    height: fit-content;
+}
+
+.card .image-container {
+    height: 20rem;
+}
+
+.ratings {
+    margin: 2% 0;
+}
+
+.empty-message {
+    font-size: 1.5rem;
+}
+
+.star-img {
+    color: var(--color-orange);
+}
+
+button {
+    border-radius: 0;
+    box-shadow: var(--shadow-mild);
+}
+
+.button-icons {
+    font-size: 1rem;
+}
+
+.solid-secondary, .solid-primary {
+   flex-wrap: nowrap;
+   justify-content: center;
+   width:fit-content;
+}
+
+.solid-secondary {
+    justify-self: flex-end;
+}
+
+.count {
+    font-size: 1rem;
+}
+
+.action-tab .actions{
+    display:grid;
+    grid-template-columns: 1fr 40%;
+}
+
+@media (max-width:900px) {
+    html {
+        font-size:15px;
+    }
+}
+
+@media (max-width: 810px) {
+
+    .product-display {
+        padding-top: 3rem;
+        border: none;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+    .contact-you {
+        margin-top: 2rem;
+    }
+
+    .card {
+        width: 70%;
+    }
+
+}
+
+@media (max-width: 410px) {
+
+    html {
+        font-size: 13px;
+    }
+
+    .card{
+        width: 90%;
+    }
+
+}
+
+

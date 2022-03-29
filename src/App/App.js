@@ -1,6 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import "./App.css";
-import {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, Auth, ErrorPage, Footer} from "../../src/pages"
+import {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, Auth, ErrorPage, Footer, ProductListing} from "../../src/pages"
 
 function App() {
   return (
@@ -14,6 +13,7 @@ function App() {
         <Route path="/mywishlist" element={<Wishlist/>}/>
         <Route path="/auth" element={<Auth/>}/>
         <Route path="/404-page-not-found" element={<ErrorPage/>}/>
+        <Route path="/products" element={<ProductListing/>}/>
       </Routes>
       <Footer/>
     </div>
