@@ -12,7 +12,7 @@
     gap: 3%;
 }
 
-.login-page-content .card {
+.login-page-content .card, .signup-page-content .card {
     padding: 1rem;
     min-width: 50%;
     margin: 1rem;
@@ -95,9 +95,9 @@ button {
     right: 0;
 }
 
-.login-page-content .image-container {
+.login-page-content .image-container, .signup-page-content .image-container {
     margin: 2rem; 
-    width: clamp(20rem, 25rem , 35rem)
+    width: clamp(20rem, 25rem , 35rem);
 }
 
 @media (max-width: 775px) {
