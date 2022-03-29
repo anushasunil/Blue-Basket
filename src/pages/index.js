@@ -4,10 +4,10 @@ import { MockmanComponent } from "../pages/mockApi/Mockman/MockmanComponent";
 import { Nav } from "../components/Nav/Nav";
 import { Cart } from "../pages/Cart/Cart";
 import { Wishlist } from "../pages/Wishlist/Wishlist";
-import { Auth } from "../pages/Authentication/Auth";
+import { LoginPage } from "./Authentication/Login/Login";
 import { ErrorPage } from "../pages/Error/ErrorPage";
 import { Footer } from "../components/Footer/Footer";
 import { ProductListing } from "./ProductListing/ProductListing";
+import { ProductListingProvider } from "../contexts/product-context";
 
-
-export {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, Auth, ErrorPage, Footer, ProductListing}
+export {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, LoginPage, ErrorPage, Footer, ProductListing, ProductListingProvider}

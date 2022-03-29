@@ -1,0 +1,113 @@
+
+
+.login-page-contents {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-wrapper {
+    flex-grow: 1;
+    flex-direction: row;
+    gap: 3%;
+}
+
+.login-page-content .card {
+    padding: 1rem;
+    min-width: 50%;
+    margin: 1rem;
+    text-align: left;
+}
+
+.card h3 {
+    padding: 1rem 0;
+}
+
+.save-my-info {
+    gap: 8px;
+}
+
+.actions {
+    padding: 0 8px;
+}
+
+.actions span p,
+.save-my-info p {
+    font-size: 1.1rem;
+}
+
+.actions span {
+    color: var(--color-tertiary);
+    border-bottom: 2px solid var(--color-reset);
+}
+
+.save-my-info {
+    font-size: 1.3rem;
+}
+
+button {
+    border-radius: 0;
+    box-shadow: var(--shadow-mild);
+}
+
+.action-btn button {
+    box-shadow: none;
+}
+
+.action-btn button:active {
+    top: 0;
+}
+
+.action-btn p {
+    font-size: 1.2rem;
+}
+
+.solid-primary:hover {
+    background-color: var(--color-tertiary-light);
+    color: var(--color-primary)
+}
+
+.transparent button p {
+    text-decoration: underline;
+}
+
+.outline-secondary {
+    padding: 12px 20px;
+}
+
+.icon-with-text {
+    background-color: var(--color-reset);
+}
+
+.icon-with-text p {
+    gap: 1rem;
+    font-size: 1.2rem;
+}
+
+.icon-with-text p:hover {
+    border-bottom: 1px solid;
+}
+
+.login-page-content ~ footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.login-page-content .image-container {
+    margin: 2rem; 
+    width: clamp(20rem, 25rem , 35rem)
+}
+
+@media (max-width: 775px) {
+    .login-page-content ~ footer {
+        position: static;
+    }
+}
+
+@media (max-width: 480px) {
+
+    html {
+        font-size: 12px;
+    }
+}
