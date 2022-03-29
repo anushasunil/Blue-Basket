@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import "../Auth.css";
+import { Link } from "react-router-dom";
 
 
 export function LoginPage() {
@@ -19,7 +20,7 @@ export function LoginPage() {
                         <h3>Log In</h3>
                         <ul>
                             <li>
-                                <label for="Email-Address" className="semi-bold">
+                                <label forLabel="Email-Address" className="semi-bold">
                                     Email Address
                                 </label>
                                 <div className="input-box display-flex-column">
@@ -33,7 +34,7 @@ export function LoginPage() {
                                 </div>
                             </li>
                             <li>
-                                <label for="Password" className="semi-bold">Password</label>
+                                <label forLabel="Password" className="semi-bold">Password</label>
                                 <div className="input-box display-flex-column">
                                     <div className="input-icon-container">
                                         <input type="password" placeholder="password" className="flex-grow"/>
@@ -56,7 +57,7 @@ export function LoginPage() {
                             </button>
                             <button className="icon-with-text transparent display-align-center display-justify-center">
                                 <p>
-                                   <a href="/Authentication/SignUp/signup.html">Create New Account</a>
+                                   <Link to="/sign-up">Create a New Account</Link>
                                 </p>
                                 <i className="fa-solid fa-angle-right"></i>
                             </button>
