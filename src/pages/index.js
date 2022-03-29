@@ -8,6 +8,6 @@ import { Auth } from "../pages/Authentication/Auth";
 import { ErrorPage } from "../pages/Error/ErrorPage";
 import { Footer } from "../components/Footer/Footer";
 import { ProductListing } from "./ProductListing/ProductListing";
+import { ProductListingProvider } from "../contexts/product-context";
 
-
-export {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, Auth, ErrorPage, Footer, ProductListing}
+export {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, Auth, ErrorPage, Footer, ProductListing, ProductListingProvider}
