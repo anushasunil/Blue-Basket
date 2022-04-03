@@ -17,6 +17,7 @@
     min-width: 50%;
     margin: 1rem;
     text-align: left;
+    max-width: 25rem;
 }
 
 .card h3 {
@@ -100,9 +101,21 @@ button {
     width: clamp(20rem, 25rem , 35rem);
 }
 
+.validation-message {
+    font-size: 1rem;
+    color: var(--color-error-dark)
+}
+
 @media (max-width: 775px) {
     .login-page-content ~ footer {
         position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-page-content .card {
+        width: 100%;
+        margin: 8px;
     }
 }
 
