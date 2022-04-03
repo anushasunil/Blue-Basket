@@ -31,8 +31,8 @@ const LoginContextProvider = ({children}) => {
 
         try {
             const response = await axios.post("/api/auth/login", credentials);
-            console.log(responseData.status, "got the response");
-            if(responseData.status === 201)
+            console.log(response.status, "got the response");
+            if(response.status === 201)
                 setValidationMessage("Incorrect Password, Please try again")
             else  {
                 setValidationMessage("");
