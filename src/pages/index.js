@@ -10,5 +10,7 @@ import { ErrorPage } from "../pages/Error/ErrorPage";
 import { Footer } from "../components/Footer/Footer";
 import { ProductListing } from "./ProductListing/ProductListing";
 import { ProductListingProvider } from "../contexts/product-context";
+import { LoginContextProvider } from "../contexts/login-context";
+import { SignUpContextProvider } from "../contexts/signup-context";
 
-export {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, LoginPage, ErrorPage, Footer, ProductListing, ProductListingProvider, SignUpPage}
+export {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, LoginPage, ErrorPage, Footer, ProductListing, ProductListingProvider, LoginContextProvider, SignUpPage, SignUpContextProvider}
