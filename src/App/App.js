@@ -13,7 +13,7 @@ function App() {
         <Route path="/mywishlist" element={<Wishlist/>}/>
         <Route path="/login" element={<LoginPage/>}/>
         <Route path="/sign-up" element={<SignUpPage/>}/>
-        <Route path="/404-page-not-found" element={<ErrorPage/>}/>
+        <Route path="*" element={<ErrorPage/>}/>
         <Route path="/products" element={<ProductListing/>}/>
       </Routes>
       <Footer/>
