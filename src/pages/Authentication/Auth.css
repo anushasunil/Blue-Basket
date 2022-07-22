@@ -12,11 +12,12 @@
     gap: 3%;
 }
 
-.login-page-content .card {
+.login-page-content .card, .signup-page-content .card {
     padding: 1rem;
     min-width: 50%;
     margin: 1rem;
     text-align: left;
+    max-width: 25rem;
 }
 
 .card h3 {
@@ -94,14 +95,26 @@ button {
     right: 0;
 }
 
-.login-page-content .image-container {
+.login-page-content .image-container, .signup-page-content .image-container {
     margin: 2rem; 
-    width: clamp(20rem, 25rem , 35rem)
+    width: clamp(20rem, 25rem , 35rem);
+}
+
+.validation-message {
+    font-size: 1rem;
+    color: var(--color-error-dark)
 }
 
 @media (max-width: 775px) {
     .login-page-content ~ footer {
         position: static;
+    }
+}
+
+@media (max-width: 600px) {
+    .login-page-content .card {
+        width: 100%;
+        margin: 8px;
     }
 }
 

@@ -9,12 +9,14 @@ const ProductListingProvider = ({ children }) => {
   const [productState, productDispatch] = useReducer(filterOutContents,
    defaultFilter);
 
-  const {loading , responseData, error} = useAxios("/api/products");
+  const {loading , responseData, error} = useAxios("GET", "/api/products");
 
   let productArray = []
 
-  if(!(loading || error)) 
-      productArray = [...responseData.products]
+  if(!(loading || error)) {
+    productArray = [...responseData.products];
+  }
+     
 
   let filteredList = getUpdatedProductList(productState, productArray)
 

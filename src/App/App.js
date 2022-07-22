@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, LoginPage, ErrorPage, Footer, ProductListing} from "../../src/pages"
+import {Home, MockbeeHome, MockmanComponent, Nav, Cart, Wishlist, LoginPage,SignUpPage, ErrorPage, Footer, ProductListing} from "../../src/pages"
 
 function App() {
   return (
@@ -12,7 +12,8 @@ function App() {
         <Route path="/mycart" element={<Cart/>}/>
         <Route path="/mywishlist" element={<Wishlist/>}/>
         <Route path="/login" element={<LoginPage/>}/>
-        <Route path="/404-page-not-found" element={<ErrorPage/>}/>
+        <Route path="/sign-up" element={<SignUpPage/>}/>
+        <Route path="*" element={<ErrorPage/>}/>
         <Route path="/products" element={<ProductListing/>}/>
       </Routes>
       <Footer/>

@@ -18,9 +18,9 @@ section {
 
 input[type="range"] {
     accent-color: var(--color-tertiary-light);
-     background: transparent;
-     cursor: pointer;
-     width: 100%;
+    background: transparent;
+    cursor: pointer;
+    width: 100%;
 }
 
 input[type="range"]:focus {
@@ -127,7 +127,7 @@ button {
         margin-top: 2rem;
     }
 
-    .card {
+    .product-display .card {
         width: 70%;
     }
 
@@ -139,7 +139,7 @@ button {
         font-size: 13px;
     }
 
-    .card{
+    .product-display .card{
         width: 90%;
     }
 

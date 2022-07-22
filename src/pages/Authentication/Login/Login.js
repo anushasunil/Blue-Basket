@@ -1,11 +1,26 @@
-import { useEffect } from "react";
+import { useState } from "react";
 import "../Auth.css";
-
+import { Link } from "react-router-dom";
+import {useLogin} from "../../../contexts/login-context"
 
 export function LoginPage() {
-    useEffect(()=>{
-        document.title = "Login | BlueBasket"
-    })
+   
+    document.title = "Login | BlueBasket"
+
+    const [inputType, setInputType] = useState("password")
+    const { 
+        loginCred, 
+        loginDispatch , 
+        loginHandler, 
+        validationMessage
+    } = useLogin();
+
+    const inputTypeHandler = () => {
+        (inputType === "password")?
+            setInputType("text")
+            : 
+            setInputType("password");
+    }
 
     return (
         <div className="login-page-content">
@@ -13,13 +28,15 @@ export function LoginPage() {
                 <div className="image-container">
                     <img src="/assets/ecomm-login.png" alt="header-img"/>
                 </div>
-            <div className="card-container">
+            <form 
+                className="login card-container" 
+                onSubmit={(e) => {loginHandler(e, loginCred)}}>
                 <div className="card for-login">
                     <div className="content">
                         <h3>Log In</h3>
                         <ul>
                             <li>
-                                <label for="Email-Address" className="semi-bold">
+                                <label forlabel="Email-Address" className="semi-bold">
                                     Email Address
                                 </label>
                                 <div className="input-box display-flex-column">
@@ -28,22 +45,50 @@ export function LoginPage() {
                                         type="email" 
                                         placeholder="anusha@neog.camp" 
                                         className="flex-grow"
+                                        onChange={(e)=>{
+                                            if(e.target.value.length !== 0)
+                                            loginDispatch({type: "EMAIL", payload: e.target.value})
+                                        }}  
                                         />
                                     </div>
                                 </div>
                             </li>
                             <li>
-                                <label for="Password" className="semi-bold">Password</label>
+                                <label 
+                                    forlabel="Password" 
+                                    className="semi-bold"
+                                >
+                                        Password
+                                </label>
                                 <div className="input-box display-flex-column">
                                     <div className="input-icon-container">
-                                        <input type="password" placeholder="password" className="flex-grow"/>
+                                        <input 
+                                            type={inputType} 
+                                            placeholder="password" 
+                                            className="flex-grow"
+                                            onChange={(e)=>{
+                                                if(e.target.value.length !== 0)
+                                                loginDispatch({type: "PASSWORD", payload: e.target.value})
+                                            }}  
+                                        />
+                                        <i 
+                                            className="fa-solid fa-eye inner-icon clickable-image"
+                                            onClick={inputTypeHandler}
+                                        ></i>
                                     </div>
                                 </div>
+                            </li>
+                            <li>
+                                {validationMessage && (<small className="validation-message bold">{validationMessage}</small>)} 
                             </li>
                         </ul>
                         <div className="actions display-align-center display-justify-space-between">
                             <div className="save-my-info display-align-center">
-                                <input type="checkbox" name="remember-me" className="checkbox"/>
+                                <input 
+                                    type="checkbox" 
+                                    name="remember-me" 
+                                    className="checkbox"
+                                />
                                 <p className="bold">Save my Info</p>
                             </div>
                             <span>
@@ -51,19 +96,22 @@ export function LoginPage() {
                             </span>
                         </div>
                         <div className="action-btn display-flex-column">
-                            <button className="solid-primary">
+                            <button 
+                                className="solid-primary" 
+                                type="submit"
+                            >
                                 <p className="bold">LOG IN</p>
                             </button>
                             <button className="icon-with-text transparent display-align-center display-justify-center">
                                 <p>
-                                   <a href="/Authentication/SignUp/signup.html">Create New Account</a>
+                                   <Link to="/sign-up">Create a New Account</Link>
                                 </p>
                                 <i className="fa-solid fa-angle-right"></i>
                             </button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </form>
         </div>
         </div>
     )

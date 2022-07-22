@@ -17,7 +17,7 @@ export function Nav() {
                 </div>
             </div>
             <div className="actions display-align-center">
-                <Link to="/auth">
+                <Link to="/login">
                     <button className="outline-secondary">
                         <p>LOG OUT</p>
                     </button>
