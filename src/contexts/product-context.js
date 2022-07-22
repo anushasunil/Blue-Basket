@@ -14,9 +14,7 @@ const ProductListingProvider = ({ children }) => {
   let productArray = []
 
   if(!(loading || error)) {
-    // console.log(loading, responseData, error);
     productArray = [...responseData.products];
-    // console.log(responseData);
   }
      
 
