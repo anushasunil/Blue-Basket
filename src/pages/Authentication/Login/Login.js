@@ -1,15 +1,19 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../Auth.css";
 import { Link } from "react-router-dom";
 import {useLogin} from "../../../contexts/login-context"
-import { useAxios } from "../../../utility/hooks/useAxios";
 
 export function LoginPage() {
    
     document.title = "Login | BlueBasket"
 
     const [inputType, setInputType] = useState("password")
-    const { loginCred, loginDispatch , loginHandler, validationMessage} = useLogin();
+    const { 
+        loginCred, 
+        loginDispatch , 
+        loginHandler, 
+        validationMessage
+    } = useLogin();
 
     const inputTypeHandler = () => {
         (inputType === "password")?

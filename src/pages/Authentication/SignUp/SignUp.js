@@ -1,13 +1,27 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 import { Link } from "react-router-dom"
 import "../Auth.css"
 import { useSignUp } from "../../../contexts/signup-context"
 
-export const SignUpPage = () => {
+const SignUpPage = () => {
     document.title = "Sign Up | BlueBasket"
     
-    const [passwordCheck, setPasswordCheck] = useState(true)
-    const { signUpCred, signUpDispatch, setAcceptedTerms, signUpHandler} = useSignUp();
+    const { 
+        signUpCred, 
+        signUpDispatch, 
+        setAcceptedTerms, 
+        signUpHandler, 
+        validationMessage, 
+        setPasswordCheck
+    } = useSignUp();
+    const [inputType, setInputType] = useState("password");
+
+    const inputTypeHandler = () => {
+        (inputType === "password")?
+            setInputType("text")
+            : 
+            setInputType("password");
+    }
 
     return (
         <div className="main-wrapper signup-page-content display-justify-center display-align-center">
@@ -86,7 +100,7 @@ export const SignUpPage = () => {
                                             signUpDispatch({type: "PASSWORD", payload: e.target.value})
                                         }}
                                     />
-                                    <i className="fa-solid fa-eye inner-icon"></i>
+                                    <i className="fa-solid fa-eye inner-icon" onClick={inputTypeHandler}></i>
                                 </div>
                             </div>
                         </li>
@@ -105,18 +119,18 @@ export const SignUpPage = () => {
                                                 setPasswordCheck(true)
                                         }}
                                     />
-                                    <i className="fa-solid fa-eye inner-icon"></i>
+                                    <i className="fa-solid fa-eye inner-icon"  onClick={inputTypeHandler}></i>
                                 </div>
                             </div>
                         </li>
-                        <li>{!passwordCheck && (<small className="validation-message bold">Password didn't match, Please try again.</small>)}</li>
+                        <li><small className="validation-message bold">{validationMessage}</small></li>
                     </ul>
                     <div className="actions display-align-center display-justify-center">
                         <div className="save-my-info display-align-center">
                             <input 
 
                                 type="checkbox" 
-                                name="remember-me" 
+                                name="accepted terms" 
                                 className="checkbox"
                                 onChange={(e)=>{
                                     setAcceptedTerms(e.target.checked)
@@ -127,7 +141,7 @@ export const SignUpPage = () => {
                     </div>
                     <div className="action-btn display-flex-column">
                         <button className="solid-primary" type="submit">
-                            <p className="bold">Create New Account</p>
+                            <p className="bold" >Create New Account</p>
                         </button>
                         <button className="icon-with-text transparent display-align-center display-justify-center">
                             <p>
@@ -142,3 +156,6 @@ export const SignUpPage = () => {
     </div>
     )
 }
+
+
+export {SignUpPage}
