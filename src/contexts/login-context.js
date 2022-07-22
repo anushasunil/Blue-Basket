@@ -1,56 +1,50 @@
 import {useContext, createContext, useReducer,useState} from "react";
 import axios from "axios" 
-import {useNavigate} from "react-router-dom"
-import { useAxios } from "../utility/hooks/useAxios";
+import { useNavigate} from "react-router-dom"
+import { defaultCredentials, setLoginCredentials } from "../utility/utils";
  
 const LoginContext = createContext("");
-
-const defaultCredentials = {
-    email: "",
-    password: ""
-}
-
-const setLoginCredentials = (loginCred, action) => {
-    switch(action.type) {
-        case "EMAIL" :
-            return ({...loginCred, email : action.payload})
-        case "PASSWORD" :
-            return ({...loginCred, password : action.payload})
-        default: return ({...loginCred})
-    }
-}
 
 const LoginContextProvider = ({children}) => {
     
     const [validationMessage, setValidationMessage] = useState("");
+    const [inputType, setInputType] = useState("password");
     const navigate = useNavigate()
     const [loginCred, loginDispatch] = useReducer(setLoginCredentials,defaultCredentials);
 
     const loginHandler = async (e, credentials) => {
-        e.preventDefault()
+        e.preventDefault();
 
         try {
-            const response = await axios.post("/api/auth/login", credentials);
-            console.log(response.status, "got the response");
-            if(response.status === 201)
-                setValidationMessage("Incorrect Password, Please try again")
+            const {data:{encodedToken}, status} = await axios.post("/api/auth/login", credentials);
+            if(status === 201)
+                setValidationMessage("Incorrect Password, Please try again");
             else  {
                 setValidationMessage("");
                 navigate(-1);
-                localStorage.setItem("token", response.data.encodedToken);
+                localStorage.setItem("token", encodedToken);
             }
         } catch (error) {
-            console.log(error);
+            console.err(error);
             if(credentials === defaultCredentials) 
                 setValidationMessage("Please fill all the details");
-            else
-                setValidationMessage("Looks like you dont have an account, Create a New Account!")
+            else {
+                navigate("/sign-up");
+            }
+                
         }
     };
 
 
     return (
-        <LoginContext.Provider value={{loginCred, loginDispatch, loginHandler, validationMessage}}>
+        <LoginContext.Provider value={{
+            loginCred, 
+            loginDispatch, 
+            loginHandler, 
+            validationMessage, 
+            inputType, 
+            setInputType
+        }}>
             {children}
         </LoginContext.Provider>
     )

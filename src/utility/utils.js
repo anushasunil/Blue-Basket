@@ -1,3 +1,6 @@
+import { v4 as uuid } from "uuid";
+import { formatDate } from "../backend/utils/authUtils";
+
 // Product Listing utility functions
 
 
@@ -57,7 +60,6 @@ const getUpdatedProductList = (productState, productsList) => {
              temp = temp.sort((a, b) => a.newPrice - b.newPrice);
            break;
          case "MATERIAL" :
-   
            let filtersToBeApplied = [];
            for (const j in productState.material) {
              if(productState.material[j]) 
@@ -84,10 +86,7 @@ const getUpdatedProductList = (productState, productsList) => {
                temp = temp.filter(product => product.ratings >= 4);
                break;
            }
-           break;
-         case "PRICE" :
-           temp = temp.filter(product => product.newPrice <= productState[i])
-           break;
+          break;
          default : return temp
        }
      }
@@ -107,9 +106,10 @@ const filterOutContents = (productState, action) => {
             return {...productState, material: {...productState.material, rayon : action.value}};
           case "SYNTHETIC" :
             return {...productState, material: {...productState.material, synthetic : action.value}};
-          case "wool" :
+          case "WOOL" :
             return {...productState, material: {...productState.material, wool : action.value}}
         }
+        break;
       case "PRICE": 
         return {...productState, price: action.payload}
       case "RATING":
@@ -130,5 +130,56 @@ const defaultFilter =  {
     sortBy : "",
     price: Number.MAX_SAFE_INTEGER
 }
-  
-export {getRatingBadge, getUpdatedProductList, filterOutContents, defaultFilter}
+
+// auth
+
+const defaultCredentials = {
+  email: "",
+  password: ""
+}
+
+const setLoginCredentials = (loginCred, action) => {
+  switch(action.type) {
+      case "EMAIL" :
+          return ({...loginCred, email : action.payload})
+      case "PASSWORD" :
+          return ({...loginCred, password : action.payload})
+      default: return ({...loginCred})
+  }
+}
+
+// signup 
+
+const defaultSignUpCredentials = {
+  _id: uuid(),
+  firstName: "",
+  lastName: "",
+  email: "",
+  password: "",
+  createdAt: formatDate(),
+  updatedAt: formatDate()
+}
+
+const defaultSignUpStatus = {
+  passwordMatchCheck: "",
+  allFieldsFilled: "",
+  acceptedTerms: ""
+}
+
+const setSignUpCredentials = (signUpCred, action) => {
+  switch(action.type) {
+      case "EMAIL" :
+          return ({...signUpCred, email : action.payload})
+      case "PASSWORD" :
+          return ({...signUpCred, password : action.payload})
+      case "FIRSTNAME" :
+          return ({...signUpCred, firstName : action.payload})
+      case "LASTNAME" :
+          return ({...signUpCred, lastName : action.payload})
+      default: return ({...signUpCred})
+  }
+}
+
+
+ 
+export {getRatingBadge, getUpdatedProductList, filterOutContents, defaultFilter, defaultCredentials, setLoginCredentials, defaultSignUpCredentials, defaultSignUpStatus, setSignUpCredentials}
